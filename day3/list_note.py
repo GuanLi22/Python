@@ -1,4 +1,4 @@
-name = ["alex", "guanli", "alexander", "bell"]
+name = ["alex", "guanli", "alexander", "bell","frank", "poul", "jack", "lucy"]
 name2 = ["frank", "poul", "jack", "lucy"]
 number = [1, 2, 3]
 
@@ -86,11 +86,102 @@ name.count("guanli")#返回找到的guanli的个数，没找到不会报错，�
 
 # 列表的切片 name[start : end] 注意：左含右不含
 name = ["alex","jack","alexander","zhang wei","tom"]
+
+
+# 正着切
 # >>> name[1:3]
-# >>> ['jack', 'alexander']
+# ['jack', 'alexander']
 # >>> name[:2]        0可以省略
-# >>> ['alex', 'jack']
-#
+# ['alex', 'jack']
+# >>> name[2:]       后面也可以省略
+# ['alexander', 'zhang wei', 'tom']
+# >>> name[2:7]      超标写法
+# ['alexander', 'zhang wei', 'tom']
+
+# 倒着切
+# >>>  name[-4:-1]
+# ['jack', 'alexander', 'zhang wei']
+# >>> name[-4:]         前后均可省略
+# ['jack', 'alexander', 'zhang wei', 'tom']
+# >>> name[:-3]
+# ['alex', 'jack']
+
+
+# 步长 name[start:end:step]  step是步长 默认是1
+
+# >>> name[1:8]
+# ['guanli', 'alexander', 'bell', 'frank', 'poul', 'jack', 'lucy']
+
+# >>> name[1:8:2]    隔一个一切
+# ['guanli', 'bell', 'poul', 'lucy']
+
+# >>> name[1::2]  可以省略
+# ['guanli', 'bell', 'poul', 'lucy']
+
+# 2 = 跳一个切一个
+# 3 = 跳两个切一个.....
+
+# **前面输入1后切偶数 不输入或输入0切奇数
+# eg.
+# >>> name[::2]
+# ['alex', 'alexander', 'frank', 'jack']
+
+# >>> name[0::2]
+# ['alex', 'alexander', 'frank', 'jack']
+
+
+# 列表的排序
+# >>> name = ["alex", "guanli", "alexander", "bell","frank", "poul", "jack", "lucy"]
+# >>> name.sort()
+# >>> name
+# ['alex', 'alexander', 'bell', 'frank', 'guanli', 'jack', 'lucy', 'poul']
+
+# >>> number = [1,34,324,53346,32,5,7,8,3,3,7,8,9,1,3,67,9,786,34,2,4,236,2,7,8,9,3,36,8,546,34]
+# >>> number.sort()
+# >>> number
+# [1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 32, 34, 34, 34, 36, 67, 236, 324, 546, 786, 53346]
+# 数字 - 英文大写 - 英文小写 - 其他语言
+
+
+# 例表的反转
+# >>> number = [1, 1, 2, 2, 3, 3, 3, 3, 4, 5, 7, 7, 7, 8, 8, 8, 8, 9, 9, 9, 32, 34, 34, 34, 36, 67, 236, 324, 546, 786, 53346]
+# >>> number.reverse()
+# >>> number
+# [53346, 786, 546, 324, 236, 67, 36, 34, 34, 34, 32, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 5, 4, 3, 3, 3, 3, 2, 2, 1, 1]
 
 
 
+#遍历列表的值
+# >>> for i in number:
+#       print(i)
+# 53346
+# 786
+# 546
+# 324
+# 236
+# 67
+# 36
+# 34
+# ...
+
+# 打印出索引
+for i in enumerate(number):
+    print(i)
+# output:
+# (0, 53346)
+# (1, 786)
+# (2, 546)
+# (3, 324)
+# (4, 236)
+# (5, 67)
+# ....
+
+for i in enumerate(number):
+    print(i[0],i[1])
+# output:
+# 0 53346
+# 1 786
+# 2 546
+# 3 324
+# 4 236
+# 5 67
