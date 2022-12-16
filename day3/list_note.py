@@ -90,7 +90,7 @@ name = ["alex","jack","alexander","zhang wei","tom"]
 # >>> ['jack', 'alexander']
 # >>> name[:2]        0可以省略
 # >>> ['alex', 'jack']
-
+#
 
 
 
