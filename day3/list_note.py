@@ -85,8 +85,11 @@ name.count("guanli")#返回找到的guanli的个数，没找到不会报错，�
 
 
 # 列表的切片 name[start : end] 注意：左含右不含
-
-
+name = ["alex","jack","alexander","zhang wei","tom"]
+# >>> name[1:3]
+# >>> ['jack', 'alexander']
+# >>> name[:2]        0可以省略
+# >>> ['alex', 'jack']
 
 
 
