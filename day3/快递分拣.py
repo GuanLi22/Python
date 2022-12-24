@@ -470,7 +470,7 @@ special_province_dict = {"内蒙古":"内蒙古自治区",
 
 result= {}
 for item in address_data:
-#获取前三个字符
+# 获取前三个字符
 	province = item[1][:3]
 #去检查是否是特殊省份
 	special = special_province_dict.get(province)
