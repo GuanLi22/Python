@@ -1,8 +1,8 @@
 f = open("name_file", mode="r", encoding="utf-8")
 
 
-for line in f:
-    line = line.split()
+for line in f: # 每循环一次 就是读一行
+    line = line.split() #详见str_note
     height = int(line[2])
     weight = int(line[3])
     if height >= 170 and weight <= 50:
@@ -24,6 +24,10 @@ for line in f:
 #         end_list.append(v)
 # print(end_list)
 #
+
+
+
+
 # print(f.readlines())  # 会把文件变成一个大列表
 
 
