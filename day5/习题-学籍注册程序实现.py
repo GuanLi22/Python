@@ -10,6 +10,7 @@ les_l = ["Python", "Linux", "网络安全", "数据分析", "前端"]
 data = input("(*注使用,分隔 并且Python和Linux为大写)需要输入姓名,年龄,手机号,身份证号,报名的课程:")
 data_list = data.split(",")
 
+
 def lesson_reg(info):
     if data_list[4] not in les_l:
         print("输入课程名无效,只有Python, Linux, 网络安全, 数据分析, 前端这几个选项")
@@ -28,3 +29,7 @@ def lesson_reg(info):
 
 
 lesson_reg(data_list)
+
+# q: 这段代码有什么问题?
+# a: 1. 课程名输入错误时,会注册成功
+#    2. 重复注册时,会注册成功
